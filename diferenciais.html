@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <title>Samba in Paris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+
+        .header {
+            background-color: rgb(0, 0, 0);
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: goldenrod;
+        }
+
+        .nav-link {
+            color: goldenrod;
+            margin: 0 15px;
+        }
+
+        .nav-link:hover {
+            color: gold;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza as imagens */
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .gallery img {
+            width: 200px; /* Ajuste de largura para as imagens */
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .testimonials {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .testimonial-item {
+            margin: 10px 0;
+            font-style: italic;
+            text-align: center;
+            color: #555;
+            border-left: 4px solid goldenrod;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .testimonial-item::before {
+            content: '“';
+            font-size: 2em;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            color: goldenrod;
+        }
+
+        .video-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        video {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px auto;
+            background-color: goldenrod;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: gold;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Animação ao rolar */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="Index.html">Samba in Paris</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="diferenciais.html">NOSSA HISTÓRIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portifólio.html">MENU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">CONTATO & RESERVAS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container intro-section fade-in">
+            <h1>Capture sua História com a Nossa Lente</h1>
+            <p>
+                Na Fotografia em Foco, transformamos momentos únicos em obras de arte. Com atendimento personalizado, nossa equipe dedicada entende suas necessidades e cria um serviço sob medida. Usamos tecnologia de ponta para garantir fotos de alta qualidade e estamos sempre atualizados com as últimas tendências.
+                Nosso compromisso é com a sua satisfação, oferecendo revisões até que você ame cada imagem. Descubra a praticidade da nossa galeria online para compartilhar suas memórias. Venha viver uma experiência fotográfica autêntica e inesquecível!
+            </p>
+        </div>
+    </section>
+
+    <div class="gallery container-fluid fade-in">
+        <h2>Galeria de Fotos</h2>
+        <div class="gallery">
+            <a href="img/fotossite1.png" data-lightbox="gallery" data-title="Descrição da Foto 1"><img src="img/fotossite1.png" alt="Descrição da Foto 1"></a>
+            <a href="img/fotossite2.png" data-lightbox="gallery" data-title="Descrição da Foto 2"><img src="img/fotossite2.png" alt="Descrição da Foto 2"></a>
+            <a href="img/fotossite3.png" data-lightbox="gallery" data-title="Descrição da Foto 3"><img src="img/fotossite3.png" alt="Descrição da Foto 3"></a>
+            <a href="img/fotossite4.png" data-lightbox="gallery" data-title="Descrição da Foto 4"><img src="img/fotossite4.png" alt="Descrição da Foto 4"></a>
+            <a href="img/fotossite5.png" data-lightbox="gallery" data-title="Descrição da Foto 5"><img src="img/fotossite5.png" alt="Descrição da Foto 5"></a>
+            <a href="img/fotossite6.png" data-lightbox="gallery" data-title="Descrição da Foto 6"><img src="img/fotossite6.png" alt="Descrição da Foto 6"></a>
+            <a href="img/fotossite8.png" data-lightbox="gallery" data-title="Descrição da Foto 7"><img src="img/fotossite8.png" alt="Descrição da Foto 7"></a>
+            <a href="img/fotossite9.png" data-lightbox="gallery" data-title="Descrição da Foto 8"><img src="img/fotossite9.png" alt="Descrição da Foto 8"></a>
+            <a href="img/fotossite10.png" data-lightbox="gallery" data-title="Descrição da Foto 9"><img src="img/fotossite10.png" alt="Descrição da Foto 9"></a>
+            <a href="img/fotossite11.png" data-lightbox="gallery" data-title="Descrição da Foto 10"><img src="img/fotossite11.png" alt="Descrição da Foto 10"></a>
+            <a href="img/foto3g.png" data-lightbox="gallery" data-title="Descrição da Foto 11"><img src="img/foto3g.png" alt="Descrição da Foto 11"></a>
+            <a href="img/foto6de15.png" data-lightbox="gallery" data-title="Descrição da Foto 12"><img src="img/foto6de15.png" alt="Descrição da Foto 12"></a>
+            <a href="img/foto1g.png" data-lightbox="gallery" data-title="Descrição da Foto 13"><img src="img/foto1g.png" alt="Descrição da Foto 13"></a>
+            <a href="img/foto3de15.png" data-lightbox="gallery" data-title="Descrição da Foto 14"><img src="img/foto3de15.png" alt="Descrição da Foto 14"></a>
+        </div>
+    </div>
+
+    <div class="testimonials container fade-in">
+        <h2>Depoimentos</h2>
+        <div class="testimonial-item">"As fotos que recebi foram simplesmente incríveis! Capturaram cada momento da minha festa."</div>
+        <div class="testimonial-item">"Um serviço excepcional. A equipe foi super profissional e as fotos ficaram maravilhosas!"</div>
+        <div class="testimonial-item">"Recomendo a todos! Eles capturaram a essência do nosso grande dia perfeitamente."</div>
+        <div class="testimonial-item">"A experiência foi incrível e as fotos são um verdadeiro tesouro para a nossa família."</div>
+        <div class="testimonial-item">"Fiquei emocionado com o resultado! Cada imagem conta uma história."</div>
+    </div>
+
+    <div class="video-section">
+        <h2>Bastidores em Ação: Veja a Magia Acontecendo!</h2>
+        <div class="video-container">
+            <video width="320" height="240" controls>
+                <source src="videos/50176-460241673.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <video width="320" height="240" controls>
+                <source src="videos/164381-830461330.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <video width="320" height="240" controls>
+                <source src="videos/32454-392669561.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="contato.html" class="cta-button">Solicite um Orçamento</a>
+    </div>
+
+    <footer class="footer">
+        <p>Contato: contato@fotografiaemfoco.com | Telefone: (00) 0000-0000</p>
+        <p>©️ 2024 Fotografia em Foco. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Animação ao rolar
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            const options = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px"
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            fadeIns.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
